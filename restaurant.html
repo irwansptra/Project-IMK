@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant - Celestia Bay Hotel</title>
+  <link rel="stylesheet" href="css/restaurant.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">
+      <img src="assets/home_page_logo.png" alt="Celestia Bay Hotel" />
+      <span>Celestia Bay Hotel</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="facilities.html">Facilities & Services</a></li>
+        <li><a href="rooms.html">Rooms & Suites</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="restaurant.html" class="active">Restaurant</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Parallax Effect -->
+  <section class="restaurant-hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Experience an unforgettable <br><span>culinary journey</span></h1>
+        <p>Indulge in a culinary journey at our signature restaurant, where exquisite flavors meet breathtaking ocean views. Our chefs craft each dish with the finest ingredients, blending international cuisine with local specialties to create a dining experience like no other.</p>
+        <div class="hero-buttons">
+          <a href="reservation.html" class="reserve-btn">Reserve Now</a>
+          <a href="#menu" class="menu-btn">View Menu</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- Restaurant Intro -->
+  <section class="restaurant-intro">
+    <div class="intro-container">
+      <div class="intro-text">
+        <p class="section-label">Fine Dining —</p>
+        <h2>Celestia Bay's <span>Culinary Excellence</span></h2>
+        <p>Our award-winning restaurant offers a sophisticated yet relaxed atmosphere where every meal becomes a memorable occasion. With panoramic views of the bay and a menu that changes with the seasons, we invite you to savor the finest culinary creations.</p>
+        <div class="awards">
+          <div class="award-item">
+            <i class="fas fa-award"></i>
+            <span>Michelin Star 2023</span>
+          </div>
+          <div class="award-item">
+            <i class="fas fa-award"></i>
+            <span>Best Oceanview Restaurant 2022</span>
+          </div>
+        </div>
+      </div>
+      <div class="intro-image">
+        <img src="assets/restaurant-view.jpg" alt="Restaurant Interior" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Chef's Special Section -->
+  <section class="chef-special">
+    <div class="section-header">
+      <p class="section-label">Signature Dishes —</p>
+      <h2>Chef's <span>Specialties</span></h2>
+    </div>
+    <div class="special-dishes">
+      <div class="dish-card">
+        <div class="dish-image">
+          <img src="assets/signature-dish-1.jpg" alt="Celestia Seafood Tower" />
+          <div class="dish-price">$48</div>
+        </div>
+        <div class="dish-info">
+          <h3>Celestia Seafood Tower</h3>
+          <p>An impressive three-tier presentation of the freshest local seafood including oysters, lobster, crab, and shrimp, served with house-made sauces.</p>
+          <div class="dish-icons">
+            <span><i class="fas fa-fish"></i> Seafood</span>
+            <span><i class="fas fa-star"></i> Signature</span>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-image">
+          <img src="assets/signature-dish-2.jpg" alt="Wagyu Beef Tenderloin" />
+          <div class="dish-price">$62</div>
+        </div>
+        <div class="dish-info">
+          <h3>Wagyu Beef Tenderloin</h3>
+          <p>Premium A5 Japanese Wagyu served with truffle mashed potatoes, grilled asparagus, and red wine reduction.</p>
+          <div class="dish-icons">
+            <span><i class="fas fa-drumstick-bite"></i> Meat</span>
+            <span><i class="fas fa-star"></i> Signature</span>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card">
+        <div class="dish-image">
+          <img src="assets/signature-dish-3.jpg" alt="Tropical Fruit Pavlova" />
+          <div class="dish-price">$18</div>
+        </div>
+        <div class="dish-info">
+          <h3>Tropical Fruit Pavlova</h3>
+          <p>Light meringue with passionfruit cream and seasonal tropical fruits, finished with edible flowers.</p>
+          <div class="dish-icons">
+            <span><i class="fas fa-ice-cream"></i> Dessert</span>
+            <span><i class="fas fa-leaf"></i> Vegetarian</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Showcase Section -->
+  <section class="restaurant-menu" id="menu">
+    <div class="menu-intro">
+      <p class="section-label">Our Menus —</p>
+      <h2>Find your next favorite<br><span>dish in our world-class restaurant</span></h2>
+      <p class="menu-description">
+        Whether you're enjoying a romantic dinner, a casual brunch, or a refreshing drink at sunset, every moment at our restaurant is designed to delight your senses.
+      </p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-tab="breakfast">Breakfast</button>
+      <button class="tab-btn" data-tab="lunch">Lunch</button>
+      <button class="tab-btn" data-tab="dinner">Dinner</button>
+      <button class="tab-btn" data-tab="drinks">Drinks</button>
+    </div>
+
+    <div class="menu-content">
+      <!-- Breakfast Menu -->
+      <div class="menu-grid active" id="breakfast">
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Tropical Fruit Platter</h3>
+            <span class="item-price">$16</span>
+          </div>
+          <p class="item-description">Seasonal local fruits with honey yogurt and granola</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Celestia Bay Benedict</h3>
+            <span class="item-price">$22</span>
+          </div>
+          <p class="item-description">Poached eggs on crab cakes with hollandaise sauce</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Pancake Stack</h3>
+            <span class="item-price">$18</span>
+          </div>
+          <p class="item-description">Fluffy pancakes with maple syrup and berry compote</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Avocado Toast</h3>
+            <span class="item-price">$14</span>
+          </div>
+          <p class="item-description">Sourdough with smashed avocado, cherry tomatoes, and feta</p>
+        </div>
+      </div>
+
+      <!-- Lunch Menu -->
+      <div class="menu-grid" id="lunch">
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Lobster Roll</h3>
+            <span class="item-price">$28</span>
+          </div>
+          <p class="item-description">Fresh lobster meat with lemon aioli on brioche</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Quinoa Salad</h3>
+            <span class="item-price">$18</span>
+          </div>
+          <p class="item-description">With roasted vegetables, feta, and lemon dressing</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Beach Club Sandwich</h3>
+            <span class="item-price">$22</span>
+          </div>
+          <p class="item-description">Chicken, bacon, avocado, and tomato on toasted bread</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Fish Tacos</h3>
+            <span class="item-price">$24</span>
+          </div>
+          <p class="item-description">Beer-battered local fish with slaw and chipotle mayo</p>
+        </div>
+      </div>
+
+      <!-- Dinner Menu -->
+      <div class="menu-grid" id="dinner">
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Filet Mignon</h3>
+            <span class="item-price">$42</span>
+          </div>
+          <p class="item-description">8oz grass-fed beef with truffle mashed potatoes</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Seafood Risotto</h3>
+            <span class="item-price">$36</span>
+          </div>
+          <p class="item-description">Arborio rice with scallops, shrimp, and saffron</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Vegetable Wellington</h3>
+            <span class="item-price">$28</span>
+          </div>
+          <p class="item-description">Mushroom and spinach in puff pastry with red wine sauce</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Whole Grilled Fish</h3>
+            <span class="item-price">$38</span>
+          </div>
+          <p class="item-description">Daily catch with lemon butter and seasonal vegetables</p>
+        </div>
+      </div>
+
+      <!-- Drinks Menu -->
+      <div class="menu-grid" id="drinks">
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Celestia Sunset</h3>
+            <span class="item-price">$14</span>
+          </div>
+          <p class="item-description">Gin, passionfruit, lime, and grenadine</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Bay Breeze</h3>
+            <span class="item-price">$12</span>
+          </div>
+          <p class="item-description">Vodka, cranberry, and pineapple juice</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Local Craft Beer</h3>
+            <span class="item-price">$8</span>
+          </div>
+          <p class="item-description">Selection of regional microbrews</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>Sommelier's Wine Selection</h3>
+            <span class="item-price">$12-$25</span>
+          </div>
+          <p class="item-description">Glass selections from our award-winning cellar</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-reserve">
+      <a href="reservation.html" class="reserve-btn black">Reservation Now</a>
+      <a href="assets/full-menu.pdf" class="menu-download" download>Download Full Menu (PDF)</a>
+    </div>
+  </section>
+
+  <!-- Restaurant Gallery -->
+  <section class="restaurant-gallery">
+    <div class="section-header">
+      <p class="section-label">Gallery —</p>
+      <h2>Experience Our <span>Ambiance</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <a href="assets/gallery-1.jpg" data-lightbox="gallery" data-title="Oceanview Dining">
+        <img src="assets/gallery-1-thumb.jpg" alt="Restaurant View">
+      </a>
+      <a href="assets/gallery-2.jpg" data-lightbox="gallery" data-title="Chef's Table">
+        <img src="assets/gallery-2-thumb.jpg" alt="Chef Preparing Food">
+      </a>
+      <a href="assets/gallery-3.jpg" data-lightbox="gallery" data-title="Sunset Bar">
+        <img src="assets/gallery-3-thumb.jpg" alt="Bar Area">
+      </a>
+      <a href="assets/gallery-4.jpg" data-lightbox="gallery" data-title="Private Dining">
+        <img src="assets/gallery-4-thumb.jpg" alt="Private Room">
+      </a>
+      <a href="assets/gallery-5.jpg" data-lightbox="gallery" data-title="Wine Cellar">
+        <img src="assets/gallery-5-thumb.jpg" alt="Wine Selection">
+      </a>
+      <a href="assets/gallery-6.jpg" data-lightbox="gallery" data-title="Beachfront Dining">
+        <img src="assets/gallery-6-thumb.jpg" alt="Outdoor Seating">
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="section-header">
+      <p class="section-label">Testimonials —</p>
+      <h2>What Our Guests <span>Say</span></h2>
+    </div>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <div class="testimonial-content">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"The seafood tower was absolutely spectacular - the freshest seafood I've ever tasted. The service was impeccable and the ocean view made our anniversary dinner unforgettable."</p>
+          <div class="guest-info">
+            <img src="assets/guest-1.jpg" alt="Sarah J." />
+            <div>
+              <h4>Sarah J.</h4>
+              <span>New York, NY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-content">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"As a food critic, I've dined at hundreds of restaurants worldwide. Celestia Bay's attention to detail, from the locally sourced ingredients to the perfect wine pairings, puts it in my top 10."</p>
+          <div class="guest-info">
+            <img src="assets/guest-2.jpg" alt="Michael T." />
+            <div>
+              <h4>Michael T.</h4>
+              <span>Food & Travel Magazine</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-content">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>"The breakfast buffet was incredible with so many healthy options. My kids loved the pancake station and I appreciated the fresh juices and local fruits. We ate here every morning!"</p>
+          <div class="guest-info">
+            <img src="assets/guest-3.jpg" alt="Lisa R." />
+            <div>
+              <h4>Lisa R.</h4>
+              <span>Toronto, Canada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+        <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="assets/home_page_logo.png" alt="Celestia Bay Hotel">
+          <span>Celestia Bay Hotel</span>
+        </div>
+        <p>Experience luxury and comfort at our premier beachfront destination with world-class amenities and exceptional service.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reservation.html">Reservations</a></li>
+          <li><a href="rooms.html">Rooms & Suites</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="restaurant.html">Dining</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Oceanview Drive, Celestia Bay, CA</li>
+          <li><i class="fas fa-phone"></i> (310) 555-2024</li>
+          <li><i class="fas fa-envelope"></i> reservations@celestiabay.com</li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <div class="newsletter">
+          <h4>Subscribe to Newsletter</h4>
+          <form>
+            <input type="email" placeholder="Your email address">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 Celestia Bay Hotel. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="js/restaurant.js"></script>
+</body>
+</html>
