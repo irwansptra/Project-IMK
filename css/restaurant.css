@@ -1,0 +1,966 @@
+:root {
+  --primary: #0F0F64;
+  --secondary: #E1B41F;
+  --dark: #000000;
+  --light: #FFFFFF;
+  --cream: #F1ECDE;
+  --gray: #F5F5F5;
+  --dark-gray: #555555;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Inknut Antiqua', serif;
+  background-color: #FFFFFF;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0F0F64;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+.logo span {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #E1B41F;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFFFFF;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #E1B41F;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  nav ul {
+    margin-top: 15px;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Hero Section with Parallax */
+.restaurant-hero {
+  position: relative;
+  height: 90vh;
+  background: url('../assets/restaurant-hero.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.restaurant-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.restaurant-hero h1 span {
+  color: var(--secondary);
+}
+
+.restaurant-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.reserve-btn {
+  background: var(--secondary);
+  color: var(--dark);
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: 2px solid var(--secondary);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.reserve-btn:hover {
+  background: transparent;
+  color: var(--secondary);
+}
+
+.menu-btn {
+  background: transparent;
+  color: var(--light);
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: 2px solid var(--light);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.menu-btn:hover {
+  background: var(--light);
+  color: var(--dark);
+}
+
+/* Restaurant Intro */
+.restaurant-intro {
+  padding: 80px 0;
+  background-color: var(--light);
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 50px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-image {
+  flex: 1;
+}
+
+.intro-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-label {
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.restaurant-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.restaurant-intro h2 span {
+  color: var(--primary);
+}
+
+.restaurant-intro p {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  margin-bottom: 30px;
+}
+
+.awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.award-item {
+  display: flex;
+  align-items: center;
+  background: var(--gray);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+
+.award-item i {
+  color: var(--secondary);
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Chef's Special Section */
+.chef-special {
+  padding: 80px 0;
+  background-color: var(--gray);
+  text-align: center;
+}
+
+.section-header {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.chef-special h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.chef-special h2 span {
+  color: var(--primary);
+}
+
+.special-dishes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dish-card {
+  background: var(--light);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 350px;
+}
+
+.dish-card:hover {
+  transform: translateY(-10px);
+}
+
+.dish-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.dish-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.dish-card:hover .dish-image img {
+  transform: scale(1.05);
+}
+
+.dish-price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--secondary);
+  color: var(--dark);
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.dish-info {
+  padding: 25px;
+  text-align: left;
+}
+
+.dish-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.dish-info p {
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.dish-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+.dish-icons span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dish-icons i {
+  color: var(--secondary);
+}
+
+/* Menu Section */
+.restaurant-menu {
+  padding: 80px 0;
+  background-color: var(--light);
+}
+
+.menu-intro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.restaurant-menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.restaurant-menu h2 span {
+  color: var(--primary);
+}
+
+.menu-description {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+}
+
+/* Menu tabs styling */
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 12px 25px;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.tab-btn:hover, 
+.tab-btn.active {
+  background: var(--primary);
+  color: var(--light);
+}
+
+/* Menu content styling */
+.menu-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-grid {
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.menu-grid.active {
+  display: grid;
+}
+
+.menu-item {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background: rgba(241, 241, 241, 0.5);
+  transform: translateX(5px);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item-header h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin: 0;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.item-price {
+  font-weight: bold;
+  color: var(--secondary);
+  font-size: 1.1rem;
+}
+
+.item-description {
+  color: var(--dark-gray);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.menu-reserve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.reserve-btn.black {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+  border: 2px solid var(--primary);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.reserve-btn.black:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.menu-download {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.menu-download:hover {
+  color: var(--secondary);
+}
+
+.menu-download::before {
+  content: '\f019';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+/* Gallery Section */
+.restaurant-gallery {
+  padding: 80px 0;
+  background-color: var(--gray);
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.gallery-grid a {
+  display: block;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid a:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-grid a:hover img {
+  transform: scale(1.05);
+}
+
+/* ================ TESTIMONIAL SECTION ================ */
+.testimonials {
+  padding: 80px 0;
+  background-color: var(--light);
+  text-align: center;
+}
+
+.testimonial-slider {
+  max-width: 800px;
+  margin: 40px auto 0;
+  position: relative;
+}
+
+.testimonial {
+  display: none;
+  padding: 0 20px;
+}
+
+.testimonial.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.testimonial-content {
+  background: var(--gray);
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.testimonial-content::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  font-size: 60px;
+  color: var(--secondary);
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  opacity: 0.3;
+}
+
+.rating {
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--dark-gray);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.guest-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.guest-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.guest-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.guest-info span {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.testimonial-controls button {
+  background: var(--primary);
+  color: var(--light);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-controls button:hover {
+  background: var(--secondary);
+  color: var(--dark);
+}
+
+/* ================ HOURS & LOCATION SECTION ================ */
+.hours-location {
+  padding: 80px 0;
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.hl-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 50px;
+}
+
+.hours, .location {
+  flex: 1;
+}
+
+.hours h3, .location h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--light);
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.hours-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.day span:first-child {
+  font-weight: bold;
+}
+
+.special-notes {
+  margin-top: 30px;
+}
+
+.special-notes p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.special-notes i {
+  color: var(--secondary);
+}
+
+.location p {
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature i {
+  color: var(--secondary);
+  font-size: 1.2rem;
+}
+
+/* ================ FOOTER ================ */
+.footer {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 60px 0 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.footer-logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary);
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.footer-section h3 {
+  color: var(--secondary);
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--secondary);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--secondary);
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: var(--secondary);
+  width: 20px;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--light);
+  transition: all 0.3s;
+}
+
+.social-media a:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+.newsletter form {
+  display: flex;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.newsletter button {
+  background: var(--secondary);
+  color: var(--primary);
+  border: none;
+  padding: 0 15px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter button:hover {
+  background: var(--light);
+}
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* ================ RESPONSIVE ADJUSTMENTS ================ */
+@media (max-width: 768px) {
+  .hl-container {
+    flex-direction: column;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .intro-container {
+    flex-direction: column;
+  }
+  
+  .dish-card {
+    width: 100%;
+  }
+  
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .restaurant-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .testimonial-content {
+    padding: 30px 20px;
+  }
+  
+  .guest-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
